@@ -56,8 +56,8 @@ void setup() {
 
 void loop() {
   display.clearDisplay();
-  if(digitalRead(Buttom_left)==1)x--;
-  else if(digitalRead(Buttom_right)==1)x++;
+  if(digitalRead(Buttom_left)==1&&x>0)x--;
+  else if(digitalRead(Buttom_right)==1&&x<96)x++;
   splash();
   display.drawBitmap(x, 0, Logo, 32, 16, WHITE);
   display.display();
